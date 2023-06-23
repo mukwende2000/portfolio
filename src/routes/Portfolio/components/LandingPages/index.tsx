@@ -7,7 +7,7 @@ function index() {
   const { backgroundColor } = useContext(ThemeContext);
   const { setAsideIsOpen, setProject } = useContext(PortfolioContext);
 
-  function handleClick(id: number): {} {
+  function handleClick(id: number): void {
     projects.map((project) => {
       if (project.id === id) {
         setProject && setProject(project);
