@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+  @apply lg:relative lg:before:content-[''] before:w-1 lg:before:h-full before:absolute before:left-9 before:bg-theme3;
+}

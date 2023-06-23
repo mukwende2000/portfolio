@@ -2,6 +2,8 @@ import { Router } from "@remix-run/router";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./RootLayout";
 import Home from "./routes/Home";
+import About from "./routes/About";
+import { ThemeContextProvider } from "./contexts/ThemeContext";
 
 const router: Router = createBrowserRouter([
   {
@@ -12,6 +14,10 @@ const router: Router = createBrowserRouter([
         element: <Home />,
         path: "/",
       },
+      {
+        element: <About />,
+        path: "about",
+      },
     ],
   },
 ]);
@@ -19,7 +25,9 @@ const router: Router = createBrowserRouter([
 function App() {
   return (
     <div>
-      <RouterProvider router={router} />
+      <ThemeContextProvider>
+        <RouterProvider router={router} />
+      </ThemeContextProvider>
     </div>
   );
 }

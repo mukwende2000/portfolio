@@ -17,12 +17,12 @@ export default {
       },
       keyframes: {
         moveIn: {
-          "0%": { transform: "translate(-10px)" },
-          "100%": { transform: "translate(0)" },
+          "0%": { transform: "translate(-16px)", opacity: "0" },
+          "100%": { transform: "translate(0)", opacity: "1" },
         },
         drop: {
-          "0%": { transform: "translateY(-10px)" },
-          "100%": { transform: "translateY(0)" },
+          "0%": { transform: "translateY(-10px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
         },
       },
     },

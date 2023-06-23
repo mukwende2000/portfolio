@@ -2,8 +2,11 @@ import { FaShoppingBag, FaUser } from "react-icons/fa";
 import profile from "../../assets/images/img2.jpg";
 import Button from "../../shared/Button";
 import Typewriter from "typewriter-effect";
+import { useContext } from "react";
+import ThemeContext from "../../contexts/ThemeContext";
 
 function index() {
+  const { textColor } = useContext(ThemeContext);
   return (
     <main className="gap-40 text-primary flex items-center justify-center px-40 pt-10 h-screen w-full bg-black/90 font-opens">
       <div className="basis-full h-[100%]">
@@ -22,7 +25,7 @@ function index() {
               ],
               autoStart: true,
               loop: true,
-              wrapperClassName: "text-theme2 font-800",
+              wrapperClassName: `${textColor} font-800`,
             }}
           />
         </h1>
