@@ -11,10 +11,10 @@ type Props = {
   path: string;
 };
 function DesktopLink({ path, children, text, dropAnim, fadeAnim }: Props) {
-  const { menuIsOpen } = useContext(MenuContext);
+  const { menuIsOpen, setMenuIsOpen } = useContext(MenuContext);
   const { textHover } = useContext(ThemeContext);
   return (
-    <li>
+    <li onClick={() => setMenuIsOpen && setMenuIsOpen(false)}>
       <NavLink
         to={path}
         className={`uppercase mb-10 flex gap-8 text-lg w-40 ${textHover} duration-200 cursor-pointer`}

@@ -1,24 +1,24 @@
 import { useContext, useState } from "react";
-import { FaCog } from "react-icons/fa";
+import { FaCog, FaTimes } from "react-icons/fa";
 import ThemeContext from "../../contexts/ThemeContext";
 
 function index() {
-  const [switcheIsOpen, setSwitcherIsOpen] = useState(false);
+  const [switcherIsOpen, setSwitcherIsOpen] = useState(false);
   const { setTheme } = useContext(ThemeContext);
   return (
     <div
       className={`fixed ${
-        switcheIsOpen ? "right-0" : "-right-48"
+        switcherIsOpen ? "right-0" : "-right-48"
       } top-40 rounded border bg-primary duration-200`}
     >
       <div className="flex items-center">
         <button
           onClick={() => setSwitcherIsOpen((prev) => !prev)}
           className={`text-3xl p-1 bg-primary ${
-            switcheIsOpen ? "ml-0" : "-ml-10"
+            switcherIsOpen ? "ml-0" : "-ml-10"
           } duration-200`}
         >
-          {<FaCog className="animate-spin" />}
+          {switcherIsOpen ? <FaTimes /> : <FaCog className="animate-spin" />}
         </button>
         <div className="font-bold text-lg">Theme Switcher</div>
       </div>

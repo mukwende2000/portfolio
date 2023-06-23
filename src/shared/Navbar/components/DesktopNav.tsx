@@ -18,7 +18,7 @@ function DesktopNav() {
     <div
       className={`${
         menuIsOpen ? "h-[60%] overflow-visible" : "h-12 overflow-hidden"
-      } fixed m-10 text-primary bg-[#2b2929] px-3 py-3 w-12 rounded-full duration-300`}
+      } fixed mx-10 my-2 text-primary bg-[#2b2929] px-3 py-3 w-12 rounded-full duration-300`}
     >
       <ul>
         <li

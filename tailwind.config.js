@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         opens: ["Open sans", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       colors: {
         primary: "#fff",
@@ -14,6 +15,7 @@ export default {
       },
       fontWeight: {
         800: "800",
+        900: "900",
       },
       keyframes: {
         moveIn: {
@@ -24,6 +26,9 @@ export default {
           "0%": { transform: "translateY(-10px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
+      },
+      screens: {
+        lg: "1165px",
       },
     },
   },

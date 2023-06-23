@@ -9,7 +9,7 @@ function index({ children }: Props) {
   const { backgroundColor } = useContext(ThemeContext);
   return (
     <button
-      className={`relative overflow-hidden rounded-full px-5 py-3 mr-5 uppercase before:content-[''] before:bg-gray-400 before:rotate-12 before:absolute ${backgroundColor} hover:bg-gray-700 duration-500 before:-left-10 before:w-1 before:duration-500 hover:before:left-[100%] before:h-full inline-flex text-lg items-center gap-4`}
+      className={`relative overflow-hidden rounded-full px-5 py-3 mr-5 uppercase before:content-[''] before:bg-gray-400 before:absolute ${backgroundColor} before:-left-[100%] before:z-10 before:w-full before:duration-300 hover:before:left-[0] before:h-full inline-flex text-lg items-center gap-4`}
     >
       {children}
     </button>

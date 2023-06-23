@@ -21,7 +21,7 @@ function index() {
               strings: [
                 "A FREELANCER",
                 "A FRONTEND DEVELOPER",
-                "MUKENDE LIBIMBA",
+                "MUKWENDE LIBIMBA",
               ],
               autoStart: true,
               loop: true,
@@ -35,12 +35,12 @@ function index() {
           code and user-centric design.
         </p>
         <Button>
-          <FaUser />
-          more about me
+          <FaUser className="relative z-10" />
+          <span className="relative z-10">more about me</span>
         </Button>
         <Button>
-          <FaShoppingBag />
-          portfolio
+          <FaShoppingBag className="relative z-10" />
+          <span className="relative z-10">portfolio</span>
         </Button>
       </div>
     </main>

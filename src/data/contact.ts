@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaEnvelope, FaGithub, FaPhone } from "react-icons/fa";
 
 interface Contact {
   media: string;
@@ -10,22 +10,18 @@ interface Contact {
 const contacts: Contact[] = [
   {
     media: "Phone",
-    icon: FaBars,
+    icon: FaPhone,
     contact: "+260 765 992534",
+  },
+  {
+    media: "Github",
+    icon: FaGithub,
+    contact: "mukwende2000",
   },
   {
     media: "Email",
-    icon: FaBars,
+    icon: FaEnvelope,
     contact: "mukwende2000@gmail.com",
   },
-  {
-    media: "",
-    icon: FaBars,
-    contact: "+260 765 992534",
-  },
-  {
-    media: "Phone",
-    icon: FaBars,
-    contact: "+260 765 992534",
-  },
 ];
+export default contacts;
