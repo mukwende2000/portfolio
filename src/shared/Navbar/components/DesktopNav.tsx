@@ -9,7 +9,6 @@ import {
 } from "react-icons/fa";
 import DesktopLink from "./DesktopLInk";
 import { useContext } from "react";
-import Context from "../../../contexts/MenuContext";
 import MenuContext from "../../../contexts/MenuContext";
 
 function DesktopNav() {
@@ -17,13 +16,13 @@ function DesktopNav() {
   return (
     <div
       className={`${
-        menuIsOpen ? "h-[60%] overflow-visible" : "h-12 overflow-hidden"
-      } fixed mx-10 my-2 text-primary bg-[#2b2929] px-3 py-3 w-12 rounded-full duration-300`}
+        menuIsOpen ? "h-[65%] overflow-visible" : "h-12 overflow-hidden"
+      } fixed z-40 left-5 my-2 text-primary bg-[#2b2929] px-3 py-3 w-16 rounded-full duration-300`}
     >
       <ul>
         <li
           onClick={() => setMenuIsOpen && setMenuIsOpen((prev) => !prev)}
-          className="text-xl mb-8 hover:text-theme3 duration-200 cursor-pointer"
+          className="ml-[.6rem] text-xl mb-8 hover:text-theme3 duration-200 cursor-pointer"
         >
           {menuIsOpen ? <FaTimes /> : <FaBars />}
         </li>

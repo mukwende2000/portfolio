@@ -8,7 +8,7 @@ function index() {
     <ul>
       {contacts.map((contact) => {
         return (
-          <li className="my-7">
+          <li className="my-7" key={contact.media}>
             <p className="mb-2 text-gray-400"> {contact.media} </p>
             <div className="flex gap-5 items-center">
               {<contact.icon className={`text-xl ${textColor}`} />}

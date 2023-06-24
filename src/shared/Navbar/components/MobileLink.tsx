@@ -12,7 +12,7 @@ type Props = {
 function MobileLink({ path, children, text }: Props) {
   const { setMenuIsOpen } = useContext(MenuContext);
   return (
-    <li className="group h-auto md:h-[100%] w-full rounded-lg bg-black/50 px-5 py-10 flex justify-center items-center">
+    <li className="group h-auto md:h-[100%] w-full rounded-lg bg-black/50 px-5 flex justify-center items-center">
       <NavLink
         onClick={() => setMenuIsOpen && setMenuIsOpen(false)}
         to={path}

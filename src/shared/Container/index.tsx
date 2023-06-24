@@ -7,10 +7,7 @@ type Props = {
 
 function index({ children, styles }: Props) {
   return (
-    <div className={`${styles} w-[90%] max-w-[1100px] m-auto`}>
-      {" "}
-      {children}{" "}
-    </div>
+    <div className={`${styles} w-[90%] max-w-[920px] m-auto`}>{children}</div>
   );
 }
 

@@ -5,7 +5,7 @@ import Main from "./components/Main";
 function index() {
   return (
     <div className="min-h-screen">
-      <Container>
+      <Container styles=" animate-push">
         <Header
           textOne="GET"
           textTwo="IN TOUCH"

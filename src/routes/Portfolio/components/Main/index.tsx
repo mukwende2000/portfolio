@@ -3,7 +3,7 @@ import LandingPages from "../LandingPages";
 
 function index() {
   return (
-    <main>
+    <main className="py-10">
       <FullWebsites />
       <LandingPages />
     </main>

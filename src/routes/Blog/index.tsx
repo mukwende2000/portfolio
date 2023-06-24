@@ -4,7 +4,7 @@ import Header from "../../shared/Header";
 function index() {
   return (
     <>
-      <Container>
+      <Container styles=" animate-push">
         <Header
           textOne="MY"
           textTwo="BLOG"

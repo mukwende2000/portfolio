@@ -1,6 +1,5 @@
 import { FaCode, FaLink, FaTimes } from "react-icons/fa";
-import { Project } from "../../../../data/projects";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import ThemeContext from "../../../../contexts/ThemeContext";
 import PortfolioContext from "../../../../contexts/PortfolioContext";
 
@@ -9,14 +8,14 @@ function index() {
   const { asideIsOpen, project, setAsideIsOpen } = useContext(PortfolioContext);
   return (
     <aside
-      className={`bg-gray-500 p-5 fixed z-10 h-screen ${
+      className={`bg-gray-500 p-5 top-0 bottom-0 fixed z-10 ${
         asideIsOpen ? "right-0" : "-right-[100%]"
-      } 0 w-[50%] duration-500`}
+      } w-full md:w-[50%] duration-500`}
     >
       <div className="overflow-hidden rounded-lg">
         <img src={project?.imageUrl} alt={`${project?.name} screenshot`} />
       </div>
-      <div className="flex justify-between pr-60 py-10">
+      <div className="flex justify-between py-5">
         <h3 className={`${textColor} text-3xl font-bold`}>{project.name}</h3>
         <button
           onClick={() => setAsideIsOpen && setAsideIsOpen(false)}
@@ -27,15 +26,15 @@ function index() {
         </button>
       </div>
       <ul className="text-primary">
-        <li className="text-lg">
+        <li>
           <span className="font-light">Project: </span>
           <span>{project.name}</span>
         </li>
-        <li className="my-5 text-lg">
+        <li className="my-3">
           <span className="font-light">Client: </span>
           <span>{project.client}</span>
         </li>
-        <li className="text-lg">
+        <li>
           <span className="font-light">Tech Stack: </span>
           <span>{project.stack}</span>
         </li>

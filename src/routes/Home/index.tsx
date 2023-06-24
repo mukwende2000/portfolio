@@ -4,17 +4,19 @@ import Button from "../../shared/Button";
 import Typewriter from "typewriter-effect";
 import { useContext } from "react";
 import ThemeContext from "../../contexts/ThemeContext";
+import { useNavigate } from "react-router-dom";
 
 function index() {
   const { textColor } = useContext(ThemeContext);
+  const navigate = useNavigate();
   return (
-    <main className="gap-40 text-primary flex items-center justify-center px-40 pt-10 h-screen w-full bg-black/90 font-opens">
-      <div className="basis-full h-[100%]">
+    <main className="text-primary lg:flex justify-center px-40 pt-10 font-opens hidden animate-push">
+      <div className="basis-full">
         <img src={profile} alt="Mukwende" className="h-full" />
       </div>
-      <div className="p-5 basis-full">
+      <div className="p-5 basis-full mt-20">
         <p className="text-xl mb-3">HI THERE!</p>
-        <h1 className="text-4xl flex gap-2">
+        <h1 className="text-3xl flex gap-2">
           <span className="inline">I'M</span>
           <Typewriter
             options={{
@@ -34,14 +36,16 @@ function index() {
           immersive and beautiful web applications through carefully crafted
           code and user-centric design.
         </p>
-        <Button>
-          <FaUser className="relative z-10" />
-          <span className="relative z-10">more about me</span>
-        </Button>
-        <Button>
-          <FaShoppingBag className="relative z-10" />
-          <span className="relative z-10">portfolio</span>
-        </Button>
+        <div className="flex flex-wrap gap-2">
+          <Button handleClick={() => navigate("/about")}>
+            <FaUser className="relative z-10" />
+            <span className="relative z-10">more about me</span>
+          </Button>
+          <Button handleClick={() => navigate("/portfolio")}>
+            <FaShoppingBag className="relative z-10" />
+            <span className="relative z-10">portfolio</span>
+          </Button>
+        </div>
       </div>
     </main>
   );

@@ -22,13 +22,17 @@ export default {
           "0%": { transform: "translate(-16px)", opacity: "0" },
           "100%": { transform: "translate(0)", opacity: "1" },
         },
+        push: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
         drop: {
           "0%": { transform: "translateY(-10px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
       },
-      screens: {
-        lg: "1165px",
+      animation: {
+        push: "push .8s ease-out forwards",
       },
     },
   },

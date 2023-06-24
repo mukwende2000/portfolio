@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Navbar from "./shared/Navbar";
 import { MenuContextProvider } from "./contexts/MenuContext";
 import ThemeSwitcher from "./shared/ThemeSwitcher";
@@ -6,7 +6,7 @@ import BackBtn from "./shared/BackBtn";
 
 function RootLayout() {
   return (
-    <div className="bg-black/90 py-10">
+    <div className={`bg-black/90 py-10`}>
       <MenuContextProvider>
         <BackBtn />
         <Navbar />

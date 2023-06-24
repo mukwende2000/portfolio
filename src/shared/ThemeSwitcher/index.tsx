@@ -7,7 +7,7 @@ function index() {
   const { setTheme } = useContext(ThemeContext);
   return (
     <div
-      className={`fixed ${
+      className={`fixed z-50 ${
         switcherIsOpen ? "right-0" : "-right-48"
       } top-40 rounded border bg-primary duration-200`}
     >

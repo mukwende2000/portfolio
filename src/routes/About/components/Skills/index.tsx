@@ -10,7 +10,10 @@ function index() {
           {skills.map((skill) => {
             if (skill.category === "fundamental") {
               return (
-                <li className="uppercase text-lg font-light mt-7 first:mt-0 md:first:mt-7 py-1 border-b border-theme2">
+                <li
+                  key={skill.name}
+                  className="uppercase font-light mt-7 first:mt-0 md:first:mt-7 py-1 border-b border-theme2"
+                >
                   {skill.name}
                 </li>
               );
@@ -25,7 +28,10 @@ function index() {
           {skills.map((skill) => {
             if (skill.category === "stack") {
               return (
-                <li className="uppercase text-lg font-light mt-7 first:mt-0 md:first:mt-7 py-1 border-b border-theme2">
+                <li
+                  key={skill.name}
+                  className="uppercase font-light mt-7 first:mt-0 md:first:mt-7 py-1 border-b border-theme2"
+                >
                   {skill.name}
                 </li>
               );
@@ -40,7 +46,10 @@ function index() {
           {skills.map((skill) => {
             if (skill.category === "learning") {
               return (
-                <li className="uppercase text-lg font-light mt-7 first:mt-0 md:first:mt-7 py-1 border-b border-theme2">
+                <li
+                  key={skill.name}
+                  className="uppercase font-light mt-7 first:mt-0 md:first:mt-7 py-1 border-b border-theme2"
+                >
                   {skill.name}
                 </li>
               );

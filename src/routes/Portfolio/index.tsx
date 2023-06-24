@@ -1,5 +1,3 @@
-import { useState } from "react";
-import projects, { Project } from "../../data/projects";
 import Container from "../../shared/Container";
 import Header from "../../shared/Header";
 import Main from "./components/Main";
@@ -11,7 +9,7 @@ function index() {
     <div>
       <PorfolioContextProvider>
         <ProjectPreview />
-        <Container>
+        <Container styles=" animate-push">
           <Header
             textOne="MY"
             textTwo="PORTFOLIO"

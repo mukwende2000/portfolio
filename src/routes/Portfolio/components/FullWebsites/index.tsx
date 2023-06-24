@@ -23,7 +23,7 @@ function index() {
         {projects.map((project) => {
           if (project.category === "Full Apps") {
             return (
-              <li>
+              <li key={project.id}>
                 <button
                   onClick={() => handleClick(project.id)}
                   className="relative"

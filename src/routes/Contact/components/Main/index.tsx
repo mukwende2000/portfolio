@@ -1,15 +1,11 @@
-import { useContext } from "react";
-import ThemeContext from "../../../../contexts/ThemeContext";
 import Contacts from "../Contacts";
 import SocialProfiles from "../SocialProfiles";
 import Form from "../Form";
 
 function index() {
-  const { textColor, bgHover } = useContext(ThemeContext);
-
   return (
     <main>
-      <div className="md:flex md:gap-10 lg:gap-40">
+      <div className="md:flex my-5 md:gap-10 lg:gap-20">
         <div>
           <Contacts />
           <SocialProfiles />

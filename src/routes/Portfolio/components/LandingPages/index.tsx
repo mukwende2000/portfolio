@@ -22,7 +22,7 @@ function index() {
         {projects.map((project) => {
           if (project.category === "landing pages") {
             return (
-              <li>
+              <li key={project.id}>
                 <button
                   onClick={() => handleClick(project.id)}
                   className="relative"
