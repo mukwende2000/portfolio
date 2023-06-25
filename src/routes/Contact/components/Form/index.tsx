@@ -15,8 +15,6 @@ function index() {
     );
   }
 
-  const regExp =
-    /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/;
   return (
     <div className="my-10 text-primary">
       <p className="my-10 md:my-0">
@@ -33,6 +31,7 @@ function index() {
           <div className="relative">
             <FaUser className="text-gray-400 absolute top-[30px] left-3" />
             <input
+              required
               name="message"
               className="focus:outline-none w-full bg-[#555] my-3 pl-10 py-4 rounded-[1rem]"
               type="text"
@@ -42,6 +41,7 @@ function index() {
           <div className="relative">
             <FaEnvelope className="text-gray-400 absolute top-[30px] left-3" />
             <input
+              required
               name="email"
               className="focus:outline-none w-full bg-[#555] my-3 px-10 py-4 rounded-[1rem]"
               type="text"
@@ -52,6 +52,7 @@ function index() {
         <div className="relative">
           <FaComment className="text-gray-400 absolute top-[55px] left-3" />
           <textarea
+            required
             name="message"
             placeholder="YOUR MESSAGE"
             className="focus:outline-none w-full bg-[#555] my-3 px-10 pt-10 h-48 rounded-[2rem]"

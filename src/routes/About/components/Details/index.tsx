@@ -1,19 +1,13 @@
 import { FaDownload } from "react-icons/fa";
 import details from "../../../../data/details";
 import Button from "../../../../shared/Button";
-import { useNavigate } from "react-router-dom";
 
 function index() {
-  const navigate = useNavigate();
   function downloadCv() {
-    alert(
-      "I am still working on my CV, It will be available as soon as i am done. In the meantime you an checkout the portfolio page to view my works. Thank you."
-    );
-    navigate("/portfolio");
-    // const downloadLink = document.createElement("a");
-    // downloadLink.href = "/cv.pdf";
-    // downloadLink.download = "cv.pdf";
-    // downloadLink.click();
+    const downloadLink = document.createElement("a");
+    downloadLink.href = "/cv.pdf";
+    downloadLink.download = "cv.pdf";
+    downloadLink.click();
   }
   return (
     <div className="flex flex-col lg:block items-center">

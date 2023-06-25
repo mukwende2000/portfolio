@@ -14,7 +14,7 @@ function index({ textOne, textTwo, sub }: Props) {
       <h1 className="font-poppins font-900 text-4xl md:text-6xl text-primary">
         {textOne} <span className={`${textColor}`}>{textTwo}</span>
       </h1>
-      <p className="uppercase text-[.9rem] md:text-lg text-gray-300 mt-5">
+      <p className="uppercase text-[.9rem] md:text-[1rem]  text-gray-300 mt-5">
         {sub}
       </p>
     </header>
