@@ -6,7 +6,6 @@ import About from "./routes/About";
 import { ThemeContextProvider } from "./contexts/ThemeContext";
 import Portfolio from "./routes/Portfolio";
 import Contact from "./routes/Contact";
-import Blog from "./routes/Blog";
 
 const router: Router = createBrowserRouter([
   {
@@ -28,10 +27,6 @@ const router: Router = createBrowserRouter([
       {
         element: <Contact />,
         path: "contact",
-      },
-      {
-        element: <Blog />,
-        path: "blog",
       },
     ],
   },

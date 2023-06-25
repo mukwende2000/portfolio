@@ -84,7 +84,7 @@ const projects: Project[] = [
     imageUrl: manage,
     category: "landing pages",
     client: "Personal",
-    live: "https://manage.vercel.app",
+    live: "https://manage344.netlify.app",
     code: "https://github.com/mukwende2000/manage",
     stack: "React, Javascript, CSS",
     description: "",

@@ -10,19 +10,21 @@ import {
 import DesktopLink from "./DesktopLInk";
 import { useContext } from "react";
 import MenuContext from "../../../contexts/MenuContext";
+import ThemeContext from "../../../contexts/ThemeContext";
 
 function DesktopNav() {
   const { menuIsOpen, setMenuIsOpen } = useContext(MenuContext);
+  const { textHover } = useContext(ThemeContext);
   return (
     <div
       className={`${
-        menuIsOpen ? "h-[65%] overflow-visible" : "h-12 overflow-hidden"
+        menuIsOpen ? "h-[53%] overflow-visible" : "h-12 overflow-hidden"
       } fixed z-40 left-5 my-2 text-primary bg-[#2b2929] px-3 py-3 w-16 rounded-full duration-300`}
     >
       <ul>
         <li
           onClick={() => setMenuIsOpen && setMenuIsOpen((prev) => !prev)}
-          className="ml-[.6rem] text-xl mb-8 hover:text-theme3 duration-200 cursor-pointer"
+          className={`ml-[.6rem] text-xl mb-8 ${textHover} duration-200 cursor-pointer`}
         >
           {menuIsOpen ? <FaTimes /> : <FaBars />}
         </li>
@@ -60,15 +62,6 @@ function DesktopNav() {
           dropAnim="animate-[moveIn_.4s_ease-out_.25s_forwards]"
         >
           <FaEnvelopeOpen />
-        </DesktopLink>
-
-        <DesktopLink
-          path="/blog"
-          text="Blog"
-          fadeAnim="animate-[drop_.4s_ease-in-out_.25s_forwards]"
-          dropAnim="animate-[moveIn_.4s_ease-out_.3s_forwards]"
-        >
-          <FaBlog />
         </DesktopLink>
       </ul>
     </div>

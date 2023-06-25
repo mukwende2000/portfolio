@@ -1,23 +1,20 @@
-import { useContext, useEffect, useState } from "react";
-
+import { useContext, useEffect } from "react";
 import MobileNav from "./components/MobileNav";
 import DesktopNav from "./components/DesktopNav";
-import Context from "../../contexts/MenuContext";
 import Backdrop from "../Backdrop";
 import MenuContext from "../../contexts/MenuContext";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 function index() {
-  const [width, setWidth] = useState(innerWidth);
   const { setMenuIsOpen, menuIsOpen } = useContext(MenuContext);
+  const isAboveQuery = useMediaQuery("(min-width: 1020px)");
   useEffect(() => {
-    function checkWidth() {
-      setWidth(innerWidth);
+    if (isAboveQuery) {
+      setMenuIsOpen && setMenuIsOpen(false);
+    } else {
+      setMenuIsOpen && setMenuIsOpen(true);
     }
-    window.addEventListener("resize", checkWidth);
-    return () => {
-      window.removeEventListener("resize", checkWidth);
-    };
-  });
+  }, [isAboveQuery]);
 
   return (
     <nav>
@@ -27,9 +24,10 @@ function index() {
           onBackdropClick={() => setMenuIsOpen && setMenuIsOpen(false)}
         />
       )}
-      {width > 1020 ? <DesktopNav /> : <MobileNav />}
+      {isAboveQuery ? <DesktopNav /> : <MobileNav />}
     </nav>
   );
 }
 
 export default index;
+useContext;

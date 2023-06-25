@@ -32,9 +32,9 @@ function index() {
           />
         </h1>
         <p className="text-lg my-5 leading-8">
-          I'm a Freelance Developer based in Lusaka, Zambia. I strive to build
-          immersive and beautiful web applications through carefully crafted
-          code and user-centric design.
+          I'm a Frontend web Developer based in Lusaka, Zambia. I strive to
+          build immersive and beautiful web applications through carefully
+          crafted code and user-centric design.
         </p>
         <div className="flex flex-wrap gap-2">
           <Button handleClick={() => navigate("/about")}>

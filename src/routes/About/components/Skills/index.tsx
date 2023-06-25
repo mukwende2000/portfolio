@@ -1,6 +1,15 @@
+import { useContext } from "react";
 import { skills } from "../../../../data/skill";
+import ThemeContext from "../../../../contexts/ThemeContext";
 
 function index() {
+  const { theme } = useContext(ThemeContext);
+  const borderColor =
+    theme === "green"
+      ? "border-theme1"
+      : theme === "blue"
+      ? "border-theme2"
+      : "border-theme3";
   return (
     <section className="text-primary py-16">
       <h2 className="mb-16 text-4xl font-bold">SKILLS</h2>
@@ -12,7 +21,7 @@ function index() {
               return (
                 <li
                   key={skill.name}
-                  className="uppercase font-light mt-7 first:mt-0 md:first:mt-7 py-1 border-b border-theme2"
+                  className={`uppercase font-light mt-7 first:mt-0 md:first:mt-7 py-1 border-b ${borderColor}`}
                 >
                   {skill.name}
                 </li>
@@ -30,7 +39,7 @@ function index() {
               return (
                 <li
                   key={skill.name}
-                  className="uppercase font-light mt-7 first:mt-0 md:first:mt-7 py-1 border-b border-theme2"
+                  className={`uppercase font-light mt-7 first:mt-0 md:first:mt-7 py-1 border-b ${borderColor}`}
                 >
                   {skill.name}
                 </li>
@@ -48,7 +57,7 @@ function index() {
               return (
                 <li
                   key={skill.name}
-                  className="uppercase font-light mt-7 first:mt-0 md:first:mt-7 py-1 border-b border-theme2"
+                  className={`uppercase font-light mt-7 first:mt-0 md:first:mt-7 py-1 border-b ${borderColor}`}
                 >
                   {skill.name}
                 </li>
