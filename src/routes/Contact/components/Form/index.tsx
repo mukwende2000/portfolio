@@ -22,28 +22,15 @@ function index() {
     emailjs
       .sendForm(
         "portfolio",
-        "request_temp",
-        formRef.current,
-        "dRHc3WkZW4CXiBLpq"
-      )
-      .then((result) => {
-        setMessage("Thank you message has been sent, check your email");
-      })
-      .catch((error) => {
-        setMessage("Oops, something went wrong, try again");
-      });
-    emailjs
-      .sendForm(
-        "portfolio",
         "portfolio_template",
         formRef.current,
         "dRHc3WkZW4CXiBLpq"
       )
       .then((result) => {
-        console.log(result);
+        setMessage("Message recieved successfully, check your email");
       })
       .catch((error) => {
-        console.error(error);
+        setMessage("Oops something went wrong");
       });
   }
 
