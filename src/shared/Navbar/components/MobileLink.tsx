@@ -21,14 +21,12 @@ function MobileLink({ path, children, text, span }: Props) {
       <NavLink
         onClick={() => setMenuIsOpen && setMenuIsOpen(false)}
         to={path}
-        className="grid gap-5 place-items-center"
+        className=" w-full h-full flex items-center justify-center flex-col"
       >
-        <div className="w-[435px] py-14 grid place-items-center">
-          {children}
-          <span className="group-hover:text-theme3 font-bold text-xl">
-            {text}
-          </span>
-        </div>
+        {children}
+        <span className="group-hover:text-theme3 font-bold text-xl">
+          {text}
+        </span>
       </NavLink>
     </li>
   );

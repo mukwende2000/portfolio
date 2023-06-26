@@ -18,7 +18,7 @@ function index() {
   return (
     <div className="my-10 text-primary">
       <p className="my-10 md:my-0">
-        If you have any suggestion, project or even you want to say Hello.
+        Talk to me about you project, send me a message below and i will reply
         Please fill out the form below and I will reply you shortly.
       </p>
       <form
