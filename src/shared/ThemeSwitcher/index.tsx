@@ -13,6 +13,7 @@ function index() {
     >
       <div className="flex items-center">
         <button
+          aria-label={`${switcherIsOpen ? "Close Swicher" : "Open Switcher"}`}
           onClick={() => setSwitcherIsOpen((prev) => !prev)}
           className={`text-3xl p-1 bg-primary ${
             switcherIsOpen ? "ml-0" : "-ml-10"
@@ -24,14 +25,17 @@ function index() {
       </div>
       <div>
         <ThemeBtn
+          ariaLabel="Switch theme to green"
           switchTheme={() => setTheme && setTheme("green")}
           bgColor="bg-theme1"
         />
         <ThemeBtn
+          ariaLabel="Switch theme to yellow"
           switchTheme={() => setTheme && setTheme("blue")}
           bgColor="bg-theme2"
         />
         <ThemeBtn
+          ariaLabel="Switch theme to yellow"
           switchTheme={() => setTheme && setTheme("yellow")}
           bgColor="bg-theme3"
         />
@@ -40,15 +44,16 @@ function index() {
   );
 }
 
-function ThemeBtn({
-  bgColor,
-  switchTheme,
-}: {
-  switchTheme: () => void;
+type ThemeBtnType = {
+  ariaLabel: string;
   bgColor: string;
-}) {
+  switchTheme: () => void;
+};
+
+function ThemeBtn({ ariaLabel, bgColor, switchTheme }: ThemeBtnType) {
   return (
     <button
+      aria-label={ariaLabel}
       onClick={switchTheme}
       className={`w-10 h-10 m-3 rounded-full ${bgColor} `}
     ></button>
