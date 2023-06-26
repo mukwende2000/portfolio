@@ -18,8 +18,8 @@ function index() {
   return (
     <div className="my-10 text-primary">
       <p className="my-10 md:my-0">
-        Talk to me about you project, send me a message below and i will reply
-        Please fill out the form below and I will reply you shortly.
+        If you want to talk about your project, or anything in particular,
+        please send me a message below and I will reply you shortly.
       </p>
       <form
         ref={formRef}
