@@ -17,15 +17,17 @@ function DesktopLink({ path, children, text, dropAnim, fadeAnim }: Props) {
     <li onClick={() => setMenuIsOpen && setMenuIsOpen(false)}>
       <NavLink
         to={path}
-        className={`ml-[.6rem] uppercase mb-10 flex gap-8  w-40 ${textHover} duration-200 cursor-pointer`}
+        className={`${
+          menuIsOpen ? "inline" : "hidden"
+        } ml-[.6rem] uppercase mb-10 flex gap-8  w-40 ${textHover} duration-200 cursor-pointer`}
       >
-        <button
+        <span
           className={`-translate-y-5 opacity-0 ${
             menuIsOpen ? `${fadeAnim}` : "animate-none"
           } `}
         >
           {children}
-        </button>
+        </span>
         <span
           className={`${
             menuIsOpen ? `${dropAnim}` : "animate-none"

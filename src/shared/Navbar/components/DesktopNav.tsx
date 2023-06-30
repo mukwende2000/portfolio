@@ -26,7 +26,9 @@ function DesktopNav() {
           onClick={() => setMenuIsOpen && setMenuIsOpen((prev) => !prev)}
           className={`ml-[.6rem] text-xl mb-8 ${textHover} duration-200 cursor-pointer`}
         >
-          {menuIsOpen ? <FaTimes /> : <FaBars />}
+          <button aria-label="open menu">
+            {menuIsOpen ? <FaTimes /> : <FaBars />}
+          </button>
         </li>
         <DesktopLink
           path="/"

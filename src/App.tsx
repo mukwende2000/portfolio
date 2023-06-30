@@ -6,6 +6,7 @@ import About from "./routes/About";
 import { ThemeContextProvider } from "./contexts/ThemeContext";
 import Portfolio from "./routes/Portfolio";
 import Contact from "./routes/Contact";
+import ProjectPreview from "./routes/ProjectPreview";
 
 const router: Router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router: Router = createBrowserRouter([
       {
         element: <Contact />,
         path: "contact",
+      },
+      {
+        element: <ProjectPreview />,
+        path: "portfolio/:id",
       },
     ],
   },

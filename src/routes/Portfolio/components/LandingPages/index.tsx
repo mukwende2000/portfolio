@@ -2,6 +2,7 @@ import { useContext } from "react";
 import projects from "../../../../data/projects";
 import ThemeContext from "../../../../contexts/ThemeContext";
 import PortfolioContext from "../../../../contexts/PortfolioContext";
+import { Link } from "react-router-dom";
 
 function index() {
   const { backgroundColor } = useContext(ThemeContext);
@@ -23,9 +24,10 @@ function index() {
           if (project.category === "landing pages") {
             return (
               <li key={project.id}>
-                <button
+                <Link
+                  to={project.name}
                   onClick={() => handleClick(project.id)}
-                  className="relative"
+                  className="relative block my-2"
                 >
                   <span
                     className={`text-primary font-bold text-3xl absolute left-0 right-0 top-0 bottom-0 grid place-items-center opacity-100 hover:opacity-0 ${backgroundColor} duration-200`}
@@ -36,7 +38,7 @@ function index() {
                     src={project.imageUrl}
                     alt={`${project.name} screenshot`}
                   />
-                </button>
+                </Link>
               </li>
             );
           }

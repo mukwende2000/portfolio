@@ -8,8 +8,8 @@ function index() {
   return (
     <div
       className={`fixed z-50 ${
-        switcherIsOpen ? "right-0" : "-right-48"
-      } top-40 rounded border bg-primary duration-200`}
+        switcherIsOpen ? "right-0" : "right-[-8.5rem]"
+      } top-40 opacity-20 hover:opacity-100 bg-primary duration-200`}
     >
       <div className="flex items-center">
         <button
@@ -23,7 +23,7 @@ function index() {
         </button>
         <div className="font-bold text-lg">Theme Switcher</div>
       </div>
-      <div>
+      <div className={`${switcherIsOpen ? "block" : "hidden"}`}>
         <ThemeBtn
           ariaLabel="Switch theme to green"
           switchTheme={() => setTheme && setTheme("green")}

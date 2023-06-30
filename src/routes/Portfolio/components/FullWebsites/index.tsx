@@ -2,6 +2,7 @@ import { useContext } from "react";
 import projects from "../../../../data/projects";
 import ThemeContext from "../../../../contexts/ThemeContext";
 import PortfolioContext from "../../../../contexts/PortfolioContext";
+import { Link } from "react-router-dom";
 
 function index() {
   const { setAsideIsOpen, setProject } = useContext(PortfolioContext);
@@ -24,9 +25,10 @@ function index() {
           if (project.category === "Full Apps") {
             return (
               <li key={project.id}>
-                <button
+                <Link
+                  to={`${project.name}`}
                   onClick={() => handleClick(project.id)}
-                  className="relative"
+                  className="block my-2 relative"
                 >
                   <span
                     className={`text-primary font-bold text-3xl absolute left-0 right-0 top-0 bottom-0 flex justify-center items-center flex-col opacity-100 hover:opacity-0 ${backgroundColor} duration-200`}
@@ -42,7 +44,7 @@ function index() {
                     src={project.imageUrl}
                     alt={`${project.name} screenshot`}
                   />
-                </button>
+                </Link>
               </li>
             );
           }

@@ -1,15 +1,13 @@
 import Container from "../../shared/Container";
 import Header from "../../shared/Header";
 import Main from "./components/Main";
-import ProjectPreview from "./components/ProjectPreview";
 import { PorfolioContextProvider } from "../../contexts/PortfolioContext";
 
 function index() {
   return (
-    <div>
+    <div className="opacity-0 animate-push">
       <PorfolioContextProvider>
-        <ProjectPreview />
-        <Container styles=" animate-push">
+        <Container>
           <Header
             textOne="MY"
             textTwo="PORTFOLIO"

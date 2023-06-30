@@ -5,7 +5,7 @@ import Main from "./components/Main";
 function index() {
   return (
     <>
-      <Container styles="animate-push">
+      <Container styles="opacity-0 animate-push">
         <Header
           sub="i love bringing ideas to reality through code by building accessible,
         responsive user interfaces."

@@ -10,7 +10,7 @@ function index() {
   const { textColor } = useContext(ThemeContext);
   const navigate = useNavigate();
   return (
-    <main className="text-primary lg:flex justify-center px-40 pt-10 font-opens hidden animate-push">
+    <main className="text-primary lg:flex justify-center px-40 pt-10 font-opens hidden opacity-0 animate-push">
       <div className="basis-full">
         <img src={profile} alt="Mukwende" className="h-full" />
       </div>
@@ -31,10 +31,18 @@ function index() {
             }}
           />
         </h1>
-        <p className="text-lg my-5 leading-8">
+        <p className="text-lg my-5 leading-7">
           I'm a Frontend web Developer based in Lusaka, Zambia. I strive to
           build immersive and beautiful web applications through carefully
-          crafted code and user-centric design.
+          crafted code and user-centric design. I have always been fascinated by
+          how computers work, i used to play a lot of games and kept wondering
+          how on earth they were made. And so when i found out that one can
+          actually build their own, i knew this is what i needed to, for some
+          reason i ended up in web development but i have no doubt that i get
+          into game development not many years from now. Code is not everything
+          i do though, i enjoy playing games and reading, i believe knowledge is
+          what separates the great from the ordinary. I also love poetry,
+          especially one with a lot of word play in it.
         </p>
         <div className="flex flex-wrap gap-2">
           <Button handleClick={() => navigate("/about")}>
