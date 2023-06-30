@@ -10,7 +10,7 @@ function index() {
   const { textColor } = useContext(ThemeContext);
   const navigate = useNavigate();
   return (
-    <main className="text-primary lg:flex justify-center px-40 pt-10 font-opens hidden opacity-0 animate-push">
+    <main className="text-primary lg:flex justify-center px-40 pt-10 font-opens hidden opacity-0 animate-fadeIn">
       <div className="basis-full">
         <img src={profile} alt="Mukwende" className="h-full" />
       </div>

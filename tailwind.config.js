@@ -22,7 +22,7 @@ export default {
           "0%": { transform: "translate(-16px)", opacity: "0" },
           "100%": { transform: "translate(0)", opacity: "1" },
         },
-        push: {
+        fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
@@ -32,7 +32,7 @@ export default {
         },
       },
       animation: {
-        push: "push 4s ease-out forwards .1s",
+        fadeIn: "fadeIn 4s ease-out forwards .1s",
       },
     },
   },

@@ -5,7 +5,7 @@ import { PorfolioContextProvider } from "../../contexts/PortfolioContext";
 
 function index() {
   return (
-    <div className="opacity-0 animate-push">
+    <div className="opacity-0 animate-fadeIn">
       <PorfolioContextProvider>
         <Container>
           <Header
