@@ -28,27 +28,24 @@ const details: Detail[] = [
     value: "English, Nyanja",
     textRight: true,
   },
-  {
-    property: "Experience",
-    value: "2 Years",
-  },
+
   {
     property: "Freelance",
     value: "Available",
-    textRight: true,
   },
   {
     property: "Email",
     value: "mukwende@gmail.com",
+    textRight: true,
   },
   {
     property: "Github",
     value: "mukwende2000",
-    textRight: true,
   },
   {
     property: "Phone",
     value: "+260 765 992534",
+    textRight: true,
   },
 ];
 
