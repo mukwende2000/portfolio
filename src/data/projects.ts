@@ -48,9 +48,9 @@ const projects: Project[] = [
     client: "Personal",
     live: "https://kaffen.vercel.app",
     code: "https://github.com/mukwende2000/photom",
-    stack: "React, Typescript, Tailwind",
+    stack: "React, Typescript, Sass",
     description: `
-    Built with React, Typescript and Tailwind, Kaffen takes you through the detais of the company so named,
+    Built with React, Typescript and Sass, Kaffen takes you through the details of the company so named,
     there are two forms, one for contacting and another for making a reservation. These were implemented using 
     the react-hook-form library. Another library used was the Splide js library for the sliding contents.`,
   },
