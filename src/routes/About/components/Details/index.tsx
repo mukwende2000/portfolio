@@ -26,10 +26,10 @@ function index() {
           );
         })}
       </ul>
-      <Button handleClick={() => downloadCv()}>
+      {/* <Button handleClick={() => downloadCv()}>
         <FaDownload className="text-primary relative z-10" />
         <span className="text-primary relative z-10">Download my cv</span>
-      </Button>
+      </Button> */}
     </div>
   );
 }
