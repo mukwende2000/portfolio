@@ -5,6 +5,7 @@ import space from "../assets/images/projects/space.png";
 import bookmark from "../assets/images/projects/bookmark.png";
 import loopstudios from "../assets/images/projects/loopstudios.png";
 import room from "../assets/images/projects/room.png";
+import entertainment from "../assets/images/projects/entertainment.png";
 
 export interface Project {
   id: number;
@@ -38,6 +39,20 @@ const projects: Project[] = [
     toolkit for managing state. This was my first time using redux toolkit and i learnt the basics. It was also 
     the first time i used the modal element built into html, i still have quiet a lot to learn about it but this
     experience gave me much.`,
+  },
+
+  {
+    id: 740,
+    name: "Movies Web App",
+    imageUrl: entertainment,
+    category: "Full Apps",
+    client: "Personal",
+    live: "https://movip.vercel.app",
+    code: "https://github.com/mukwende2000/ewa",
+    stack: "React, Typescript, Tailwind",
+    description: `This is an entertainment web application that displays movies and give details about them, movies are 
+    fetched from the tmdb api and displayed on the page based on the category, genre and others. Click on a movie to view
+    its details including the cast, synopsis and many more.`,
     current: true,
   },
   {

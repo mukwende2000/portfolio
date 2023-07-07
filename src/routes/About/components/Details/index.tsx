@@ -5,8 +5,8 @@ import Button from "../../../../shared/Button";
 function index() {
   function downloadCv() {
     const downloadLink = document.createElement("a");
-    downloadLink.href = "/cv.pdf";
-    downloadLink.download = "cv.pdf";
+    downloadLink.href = "/resume.pdf";
+    downloadLink.download = "resume.pdf";
     downloadLink.click();
   }
   return (
@@ -26,10 +26,10 @@ function index() {
           );
         })}
       </ul>
-      {/* <Button handleClick={() => downloadCv()}>
+      <Button handleClick={() => downloadCv()}>
         <FaDownload className="text-primary relative z-10" />
         <span className="text-primary relative z-10">Download my cv</span>
-      </Button> */}
+      </Button>
     </div>
   );
 }
