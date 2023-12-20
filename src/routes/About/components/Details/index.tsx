@@ -3,12 +3,12 @@ import details from "../../../../data/details";
 import Button from "../../../../shared/Button";
 
 function index() {
-  function downloadCv() {
+  const downloadCv = () => {
     const downloadLink = document.createElement("a");
     downloadLink.href = "/resume.pdf";
     downloadLink.download = "resume.pdf";
     downloadLink.click();
-  }
+  };
   return (
     <div className="flex flex-col lg:block items-center">
       <ul className="grid grid-cols-2 gap-10 pb-5">

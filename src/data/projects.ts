@@ -1,7 +1,7 @@
 import audiophile from "../assets/images/projects/audiophile.png";
 import kaffen from "../assets/images/projects/kaffen.png";
 import jobspace from "../assets/images/projects/jobspace.png";
-import space from "../assets/images/projects/space.png";
+import njts from "../assets/images/projects/njts.png";
 import bookmark from "../assets/images/projects/bookmark.png";
 import loopstudios from "../assets/images/projects/loopstudios.png";
 import room from "../assets/images/projects/room.png";
@@ -53,7 +53,6 @@ const projects: Project[] = [
     description: `This is an entertainment web application that displays movies and give details about them, movies are 
     fetched from the tmdb api and displayed on the page based on the category, genre and others. Click on a movie to view
     its details including the cast, synopsis and many more.`,
-    current: true,
   },
   {
     id: 859,
@@ -89,19 +88,17 @@ const projects: Project[] = [
   },
   {
     id: 296,
-    name: "Space Tourism",
-    imageUrl: space,
+    name: "NJTS Ecommerce Store",
+    imageUrl: njts,
     category: "Full Apps",
-    client: "Personal",
-    live: "https://space10.vercel.app",
-    code: "https://github.com/mukwende2000/space-tourism",
+    client: "NJTS Store",
+    live: "https://njtsstore.vercel.app",
+    code: "https://github.com/mukwende2000/NJTS",
     stack: "React, Typescript, Tailwind",
-    description: `Space depicts a future journey to space, its another challenge from frontend mentor.
-    With four pages, one for the destination, one for the crew member, one for the technology used and 
-    the homepage, all pages have tabbed interfaces that show different stuff depending on the page you 
-    are at. This was built yet again with react and typescript, utilizing tailwind for the styling and 
-    react router dom for routing.
+    description: `NJST Store is a client project. It is an E commerce site where users can sign in and purchase products.
+    Features include Adding to Cart, Removing from Cart, Adding to Wishlist, Removing from Wishlist and many more.
     `,
+    current: true,
   },
   {
     id: 106,

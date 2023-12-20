@@ -11,7 +11,7 @@ const contacts: Contact[] = [
   {
     media: "Phone",
     icon: FaPhone,
-    contact: "+260 765 992534",
+    contact: "+260765992534 +260774305544",
   },
   {
     media: "Github",
